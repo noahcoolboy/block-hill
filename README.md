@@ -1,7 +1,8 @@
 # Block-hill
 This repository contains the source code of block-hill \
 With block-hill, you can code your brick-hill games with coding blocks (scratch) \
-This was created for the people that don't have any coding experience and don't have the time to learn JS
+This was created for the people that don't have any coding experience and don't have the time to learn JS \
+Happy coding!
 ## Contributing
 If you would like to give me a helping hand by making/designing new blocks, here is how you can
 #### Step 1 - designing the block
