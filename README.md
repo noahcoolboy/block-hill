@@ -7,3 +7,5 @@ If you would like to give me a helping hand by making/designing new blocks, here
 #### Step 1 - designing the block
 You'll need to explain to blockly what the block looks like, for that you'll have to use a tool which you can find here\
 https://blockly-demo.appspot.com/static/demos/blockfactory/index.html\
+There is a video explaining how you can use the blockfactory
+> [!VIDEO https://www.youtube.com/embed/s2_xaEvcVI0]
