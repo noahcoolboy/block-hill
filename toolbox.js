@@ -281,6 +281,10 @@ var toolbox = {
                 {
                     "kind":"block",
                     "type":"game_get"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_set"
                 }
             ]
         }
