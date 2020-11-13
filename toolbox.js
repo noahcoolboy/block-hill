@@ -267,6 +267,9 @@ var toolbox = {
             "custom":"PROCEDURE"
         },
         {
+            "kind":"sep"
+        },
+        {
             "kind":"category",
             "name":"Game",
             "colour":"0",
