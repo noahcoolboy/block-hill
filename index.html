@@ -1,35 +1,67 @@
 <html>
-    <head>
 
-    </head>
-    <body>
-        <script src="blockly/blockly_compressed.js"></script>
-        <script src="blockly/blocks_compressed.js"></script>
-        <script src="blockly/msg/js/en.js"></script>
-        <script src="blockly/javascript_compressed.js"></script>
-        <script src="toolbox.js"></script>
-        <div id="blocklyDiv" syle="height: 100vh; width: 100vw;"></div>
-        <script>
-            var workspace = Blockly.inject("blocklyDiv",{
-                toolbox: window.toolbox,
-                grid: {
-                    spacing: 50,
-                    length: 5,
-                    colour: "#ccc",
-                    snap:true
-                },
-                trashcan: true,
-                maxTrashcanContents: 0,
-                sounds: true,
-                zoom: {
-                    controls: true,
-                    wheel: true,
+<head></head>
 
-                },
-                collapse: true,
-                comments: true
-            })
-        </script>
-        
-    </body>
+<body>
+    <script src="blockly/blockly_compressed.js"></script>
+    <script src="blockly/blocks_compressed.js"></script>
+    <script src="blockly/msg/js/en.js"></script>
+    <script src="blockly/javascript_compressed.js"></script>
+    <script src="toolbox.js"></script>
+    <style>
+        td {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid grey;
+            border-bottom: none;
+            padding: 5px 19px;
+            cursor: pointer;
+        }
+    </style>
+    <table>
+        <tbody>
+            <tr>
+                <td id="work">Workspace</td>
+                <td id="code">Code</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div id="blocklyDiv" syle="height: 100%; width: 100%;"></div>
+    <span id="codespan" syle="height: 100%; width: 100%;">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </span>
+    <script>
+        var workspace = Blockly.inject("blocklyDiv", {
+            toolbox: window.toolbox,
+            grid: {
+                spacing: 50,
+                length: 5,
+                colour: "#ccc",
+                snap: true
+            },
+            trashcan: true,
+            maxTrashcanContents: 0,
+            sounds: true,
+            zoom: {
+                controls: true,
+                wheel: true,
+
+            },
+            collapse: true,
+            comments: true
+        })
+        document.getElementById("code").addEventListener("click", () => {
+            document.getElementById("blocklyDiv").hidden = true
+            document.getElementById("codespan").hidden = false
+            document.getElementById("codespan").innerText = Blockly.JavaScript.workspaceToCode(workspace)
+        })
+        document.getElementById("work").addEventListener("click", () => {
+            document.getElementById("codespan").hidden = true
+            document.getElementById("blocklyDiv").hidden = false
+        })
+
+    </script>
+
+</body>
+
 </html>
