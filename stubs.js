@@ -12,8 +12,15 @@ Blockly.JavaScript['text_log'] = function (block) {
     return code;
 };
 
-Blockly.JavaScript['game_get'] = function(block) {
+Blockly.JavaScript['game_get'] = function (block) {
     var dropdown_prop = block.getFieldValue('prop');
     var code = `Game.${dropdown_prop}`;
     return [code, Blockly.JavaScript.ORDER_MEMBER];
-  };
+};
+Blockly.JavaScript['game_set'] = function (block) {
+    var dropdown_prop = block.getFieldValue('prop');
+    var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ASSIGNMENT);
+    // TODO: Assemble JavaScript into code variable.
+    var code = `Game.${dropdown_prop} = ${value_value};\n`;
+    return code;
+};

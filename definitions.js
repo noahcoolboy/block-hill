@@ -150,6 +150,107 @@ var definitions = [{
     "colour": 0,
     "tooltip": "",
     "helpUrl": ""
+},
+{
+    "type": "game_set",
+    "message0": "Set property %1 of the game to %2",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "MOTD",
+                    "MOTD"
+                ],
+                [
+                    "assign random team",
+                    "assignRandomTeam"
+                ],
+                [
+                    "disabled core scripts",
+                    "disabledCoreScripts"
+                ],
+                [
+                    "environment",
+                    "environment"
+                ],
+                [
+                    "game id",
+                    "gameId"
+                ],
+                [
+                    "local",
+                    "local"
+                ],
+                [
+                    "map",
+                    "map"
+                ],
+                [
+                    "map name",
+                    "mapName"
+                ],
+                [
+                    "modules",
+                    "modules"
+                ],
+                [
+                    "player count",
+                    "playerCount"
+                ],
+                [
+                    "player spawning",
+                    "playerSpawning"
+                ],
+                [
+                    "players",
+                    "players"
+                ],
+                [
+                    "port",
+                    "port"
+                ],
+                [
+                    "recursive loading",
+                    "recursiveLoading"
+                ],
+                [
+                    "send bricks",
+                    "sendBricks"
+                ],
+                [
+                    "server settings",
+                    "serverSettings"
+                ],
+                [
+                    "system messages",
+                    "systemMessages"
+                ],
+                [
+                    "user scripts",
+                    "userScripts"
+                ],
+                [
+                    "version",
+                    "version"
+                ],
+                [
+                    "world",
+                    "world"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "value"
+        }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 0,
+    "tooltip": "",
+    "helpUrl": ""
 }]
 
 Blockly.defineBlocksWithJsonArray(definitions)
