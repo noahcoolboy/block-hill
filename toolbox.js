@@ -175,7 +175,10 @@ var toolbox = {
                     "kind":"block",
                     "type":"text_prompt_ext"
                 },*/ // Not supported
-                
+                {
+                    "kind":"block",
+                    "type":"text_log"
+                }
             ]
         },
         {
@@ -262,6 +265,17 @@ var toolbox = {
             "name":"Functions",
             "colour": "310",
             "custom":"PROCEDURE"
+        },
+        {
+            "kind":"category",
+            "name":"Game",
+            "colour":"0",
+            "contents":[
+                {
+                    "kind":"block",
+                    "type":"game_print"
+                }
+            ]
         }
     ]
 }
