@@ -277,6 +277,10 @@ var toolbox = {
                 {
                     "kind":"block",
                     "type":"game_print"
+                }, 
+                {
+                    "kind":"block",
+                    "type":"game_get"
                 }
             ]
         }
