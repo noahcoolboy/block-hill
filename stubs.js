@@ -17,10 +17,94 @@ Blockly.JavaScript['game_get'] = function (block) {
     var code = `Game.${dropdown_prop}`;
     return [code, Blockly.JavaScript.ORDER_MEMBER];
 };
+
 Blockly.JavaScript['game_set'] = function (block) {
     var dropdown_prop = block.getFieldValue('prop');
     var value_value = Blockly.JavaScript.valueToCode(block, 'value', Blockly.JavaScript.ORDER_ASSIGNMENT);
-    // TODO: Assemble JavaScript into code variable.
     var code = `Game.${dropdown_prop} = ${value_value};\n`;
     return code;
 };
+
+Blockly.JavaScript['game_clearmap'] = function(block) {
+    var code = `Game.clearMap();\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_deletebricks'] = function(block) {
+    var value_bricks = Blockly.JavaScript.valueToCode(block, 'bricks', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.deleteBricks(${value_bricks});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_findplayer'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.findPlayerWithName(${value_player});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_loadbricks'] = function(block) {
+    var value_bricks = Blockly.JavaScript.valueToCode(block, 'bricks', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.loadBricks(${value_bricks});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_loadbrk'] = function(block) {
+    var value_bricks = Blockly.JavaScript.valueToCode(block, 'bricks', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.loadBrk(${value_bricks});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_messageall'] = function(block) {
+    var value_bricks = Blockly.JavaScript.valueToCode(block, 'bricks', Blockly.JavaScript.ORDER_NONE);
+    // TODO: Assemble JavaScript into code variable.
+    var code = `Game.messageAll(${value_bricks});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_newbot'] = function(block) {
+    var value_bot = Blockly.JavaScript.valueToCode(block, 'bot', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.newBot(${value_bot});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_newbrick'] = function(block) {
+    var value_brick = Blockly.JavaScript.valueToCode(block, 'brick', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.newBot(${value_brick});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_newteam'] = function(block) {
+    var value_team = Blockly.JavaScript.valueToCode(block, 'team', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.newTeam(${value_team});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_distance'] = function(block) {
+    var value_vec1 = Blockly.JavaScript.valueToCode(block, 'vec1', Blockly.JavaScript.ORDER_NONE);
+    var value_vec2 = Blockly.JavaScript.valueToCode(block, 'vec2', Blockly.JavaScript.ORDER_COMMA);
+
+    var code = `Game.pointDistance3D(${value_vec1},${value_vec2})`;
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+  };
+  
+  Blockly.JavaScript['game_setenvironment'] = function(block) {
+    var value_env = Blockly.JavaScript.valueToCode(block, 'env', Blockly.JavaScript.ORDER_NONE);
+    var code = `Game.setEnvironment(${value_env});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['game_environment'] = function(block) {
+    var value_ambient = Blockly.JavaScript.valueToCode(block, 'ambient', Blockly.JavaScript.ORDER_ASSIGNMENT);
+    var value_basecolor = Blockly.JavaScript.valueToCode(block, 'basecolor', Blockly.JavaScript.ORDER_ASSIGNMENT);
+    var value_basesize = Blockly.JavaScript.valueToCode(block, 'basesize', Blockly.JavaScript.ORDER_ASSIGNMENT);
+    var value_skycolor = Blockly.JavaScript.valueToCode(block, 'skycolor', Blockly.JavaScript.ORDER_ASSIGNMENT);
+    var value_sunintensity = Blockly.JavaScript.valueToCode(block, 'sunintensity', Blockly.JavaScript.ORDER_ASSIGNMENT);
+    var dropdown_weather = block.getFieldValue('weather');
+    var code = `{ambient:${value_ambient},baseColor:${value_basecolor},baseSize:${value_basesize},skyColor:${value_skycolor},sunIntensity:${value_sunintensity},weather:${dropdown_weather}}`;
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+  };
+  
+  Blockly.JavaScript['game_shutdown'] = function(block) {
+    var code = `Game.shutdown();\n`;
+    return code;
+  };

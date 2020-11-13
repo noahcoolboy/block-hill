@@ -285,7 +285,60 @@ var toolbox = {
                 {
                     "kind":"block",
                     "type":"game_set"
-                }
+                },
+                {
+                    "kind":"block",
+                    "type":"game_clearmap"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_deletebricks"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_findplayer"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_loadbricks"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_loadbrk"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_messageall"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_newbot"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_newbrick"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_newteam"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_distance"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_setenvironment"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_environment"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_shutdown"
+                },
+                
             ]
         }
     ]
