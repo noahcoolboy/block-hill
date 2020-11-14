@@ -112,8 +112,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
   Blockly.JavaScript['game_playerjoin'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
-    // TODO: Assemble JavaScript into code variable.
-    var code = `Game.on("playerJoin",${variable_var}=>{\n${statements_code}\n});\n`;
+    var code = `Game.on("playerJoin", ${variable_var}=>{\n${statements_code}});\n`;
     return code;
   };
   
@@ -121,15 +120,14 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = `;\n`;
+    var code = `Game.on("playerLeave", ${variable_var}=>{\n${statements_code}});\n`;
     return code;
   };
   
   Blockly.JavaScript['game_initialspawn'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
-    // TODO: Assemble JavaScript into code variable.
-    var code = `;\n`;
+    var code = `Game.on("initialSpawn", ${variable_var}=>{\n${statements_code}});\n`;
     return code;
   };
   
@@ -138,7 +136,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = `;\n`;
+    var code = `Game.on("chat",(${variable_var}, ${variable_var2})=>{\n${statements_code}});\n`;
     return code;
   };
   
@@ -147,6 +145,6 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = `;\n`;
+    var code = `Game.on("chatted",(${variable_var}, ${variable_var2})=>{\n${statements_code}});\n`;
     return code;
   };
