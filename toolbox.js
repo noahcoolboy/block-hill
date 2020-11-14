@@ -338,7 +338,10 @@ var toolbox = {
                     "kind":"block",
                     "type":"game_shutdown"
                 },
-                
+                {
+                    "kind":"block",
+                    "type":"game_playerjoin"
+                }
             ]
         }
     ]

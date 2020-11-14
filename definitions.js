@@ -499,6 +499,121 @@ var definitions = [{
     "colour": 0,
     "tooltip": "",
     "helpUrl": ""
+},
+{
+    "type": "game_playerjoin",
+    "message0": "Player joined %1 %2 %3",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "var",
+            "variable": "player"
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 0,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "game_playerleave",
+    "message0": "Player left %1 %2 %3",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "var",
+            "variable": "player"
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 0,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "game_initialspawn",
+    "message0": "Player loaded in %1 %2 %3",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "var",
+            "variable": "player"
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 0,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "game_chat",
+    "message0": "Intercept chat messages %1 %2 %3 %4",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "var",
+            "variable": "player"
+        },
+        {
+            "type": "field_variable",
+            "name": "var2",
+            "variable": "message"
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 0,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "game_chatted",
+    "message0": "Player chatted %1 %2 %3 %4",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "var",
+            "variable": "player"
+        },
+        {
+            "type": "field_variable",
+            "name": "var2",
+            "variable": "message"
+        },
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 0,
+    "tooltip": "",
+    "helpUrl": ""
 }]
 
 Blockly.defineBlocksWithJsonArray(definitions)

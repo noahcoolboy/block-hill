@@ -100,11 +100,54 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var value_skycolor = Blockly.JavaScript.valueToCode(block, 'skycolor', Blockly.JavaScript.ORDER_ASSIGNMENT);
     var value_sunintensity = Blockly.JavaScript.valueToCode(block, 'sunintensity', Blockly.JavaScript.ORDER_ASSIGNMENT);
     var dropdown_weather = block.getFieldValue('weather');
-    var code = `{ambient:${value_ambient},baseColor:${value_basecolor},baseSize:${value_basesize},skyColor:${value_skycolor},sunIntensity:${value_sunintensity},weather:${dropdown_weather}}`;
+    var code = `{ambient:${value_ambient||"#000000"},baseColor:${value_basecolor||"#248233"},baseSize:${value_basesize||100},skyColor:${value_skycolor||"#71b1e6"},sunIntensity:${value_sunintensity||400},weather:${dropdown_weather||"sun"}}`;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
   };
   
   Blockly.JavaScript['game_shutdown'] = function(block) {
     var code = `Game.shutdown();\n`;
+    return code;
+  };
+
+  Blockly.JavaScript['game_playerjoin'] = function(block) {
+    var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
+    var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+    // TODO: Assemble JavaScript into code variable.
+    console.log(statements_code)
+    var code = '...;\n';
+    return code;
+  };
+  
+  Blockly.JavaScript['game_playerleave'] = function(block) {
+    var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
+    var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '...;\n';
+    return code;
+  };
+  
+  Blockly.JavaScript['game_initialspawn'] = function(block) {
+    var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
+    var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '...;\n';
+    return code;
+  };
+  
+  Blockly.JavaScript['game_chat'] = function(block) {
+    var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
+    var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
+    var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '...;\n';
+    return code;
+  };
+  
+  Blockly.JavaScript['game_chatted'] = function(block) {
+    var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
+    var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
+    var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+    // TODO: Assemble JavaScript into code variable.
+    var code = '...;\n';
     return code;
   };
