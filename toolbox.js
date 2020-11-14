@@ -341,6 +341,22 @@ var toolbox = {
                 {
                     "kind":"block",
                     "type":"game_playerjoin"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_playerleave"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_initialspawn"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_chat"
+                },
+                {
+                    "kind":"block",
+                    "type":"game_chatted"
                 }
             ]
         }
