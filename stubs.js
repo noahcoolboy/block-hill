@@ -113,8 +113,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    console.log(statements_code)
-    var code = '...;\n';
+    var code = `Game.on("playerJoin",${variable_var}=>{\n${statements_code}\n});\n`;
     return code;
   };
   
@@ -122,7 +121,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = '...;\n';
+    var code = `;\n`;
     return code;
   };
   
@@ -130,7 +129,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = '...;\n';
+    var code = `;\n`;
     return code;
   };
   
@@ -139,7 +138,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = '...;\n';
+    var code = `;\n`;
     return code;
   };
   
@@ -148,6 +147,6 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
     // TODO: Assemble JavaScript into code variable.
-    var code = '...;\n';
+    var code = `;\n`;
     return code;
   };
