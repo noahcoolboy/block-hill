@@ -56,7 +56,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
   
   Blockly.JavaScript['game_messageall'] = function(block) {
     var value_bricks = Blockly.JavaScript.valueToCode(block, 'bricks', Blockly.JavaScript.ORDER_NONE);
-    // TODO: Assemble JavaScript into code variable.
+
     var code = `Game.messageAll(${value_bricks});\n`;
     return code;
   };
@@ -119,7 +119,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
   Blockly.JavaScript['game_playerleave'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
-    // TODO: Assemble JavaScript into code variable.
+
     var code = `Game.on("playerLeave", ${variable_var}=>{\n${statements_code}});\n`;
     return code;
   };
@@ -135,7 +135,7 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
-    // TODO: Assemble JavaScript into code variable.
+
     var code = `Game.on("chat",(${variable_var}, ${variable_var2})=>{\n${statements_code}});\n`;
     return code;
   };
@@ -144,7 +144,116 @@ Blockly.JavaScript['game_clearmap'] = function(block) {
     var variable_var = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var'), Blockly.Variables.NAME_TYPE);
     var variable_var2 = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('var2'), Blockly.Variables.NAME_TYPE);
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
-    // TODO: Assemble JavaScript into code variable.
+
     var code = `Game.on("chatted",(${variable_var}, ${variable_var2})=>{\n${statements_code}});\n`;
+    return code;
+  };
+
+  Blockly.JavaScript['player_get'] = function(block) {
+    var dropdown_prop = block.getFieldValue('prop');
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_MEMBER);
+    var code = value_name+'.'+dropdown_prop;
+    return [code, Blockly.JavaScript.ORDER_MEMBER];
+  };
+  
+  Blockly.JavaScript['player_set'] = function(block) {
+    var dropdown_prop = block.getFieldValue('prop');
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+    var value_val = Blockly.JavaScript.valueToCode(block, 'val', Blockly.JavaScript.ORDER_NONE);
+    var code = `${value_player}.set${dropdown_prop}(${value_val});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_addtool'] = function(block) {
+    var value_tool = Blockly.JavaScript.valueToCode(block, 'tool', Blockly.JavaScript.ORDER_NONE);
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.addTool(${value_tool});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_print'] = function(block) {
+    var value_message = Blockly.JavaScript.valueToCode(block, 'message', Blockly.JavaScript.ORDER_NONE);
+    var value_duration = Blockly.JavaScript.valueToCode(block, 'duration', Blockly.JavaScript.ORDER_COMMA);
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+    var dropdown_position = block.getFieldValue('position');
+
+    var code = `${value_player}.${dropdown_position}Print(${value_message||"hi"},${value_duration||2});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_clearmap'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.clearMap();\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_deletebricks'] = function(block) {
+    var value_bricks = Blockly.JavaScript.valueToCode(block, 'bricks', Blockly.JavaScript.ORDER_NONE);
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.deleteBricks(${value_bricks});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_destroytool'] = function(block) {
+    var value_tool = Blockly.JavaScript.valueToCode(block, 'tool', Blockly.JavaScript.ORDER_NONE);
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.destroyTool(${value_tool});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_equiptool'] = function(block) {
+    var value_tool = Blockly.JavaScript.valueToCode(block, 'tool', Blockly.JavaScript.ORDER_NONE);
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.equipTool(${value_tool});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_kick'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.kick();\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_kill'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.kill();\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_message'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+    var value_message = Blockly.JavaScript.valueToCode(block, 'message', Blockly.JavaScript.ORDER_NONE);
+
+    var code = `${value_player}.message(${value_message});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_prompt'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+    var value_message = Blockly.JavaScript.valueToCode(block, 'message', Blockly.JavaScript.ORDER_NONE);
+
+    var code = `${value_player}.prompt(${value_message});\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_respawn'] = function(block) {
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.respawn();\n`;
+    return code;
+  };
+  
+  Blockly.JavaScript['player_unequiptool'] = function(block) {
+    var value_tool = Blockly.JavaScript.valueToCode(block, 'tool', Blockly.JavaScript.ORDER_NONE);
+    var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+
+    var code = `${value_player}.unequipTool(${value_tool});\n`;
     return code;
   };

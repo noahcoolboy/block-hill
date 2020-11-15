@@ -614,6 +614,509 @@ var definitions = [{
     "colour": 0,
     "tooltip": "",
     "helpUrl": ""
+}, {
+    "type": "player_get",
+    "message0": "Get property %1 of player %2",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "admin",
+                    "admin"
+                ],
+                [
+                    "alive",
+                    "alive"
+                ],
+                [
+                    "option",
+                    "OPTIONNAME"
+                ],
+                [
+                    "worn assets",
+                    "assets"
+                ],
+                [
+                    "authenticated",
+                    "authenticated"
+                ],
+                [
+                    "blocked users",
+                    "blockedUsers"
+                ],
+                [
+                    "camera distance",
+                    "cameraDistance"
+                ],
+                [
+                    "camera subject",
+                    "cameraObject"
+                ],
+                [
+                    "camera position",
+                    "cameraPosition"
+                ],
+                [
+                    "camera rotation",
+                    "cameraRotation"
+                ],
+                [
+                    "camera type",
+                    "cameraType"
+                ],
+                [
+                    "chat color",
+                    "chatColor"
+                ],
+                [
+                    "body colors",
+                    "colors"
+                ],
+                [
+                    "left",
+                    "destroyed"
+                ],
+                [
+                    "health",
+                    "health"
+                ],
+                [
+                    "inventory",
+                    "inventory"
+                ],
+                [
+                    "jump power",
+                    "jumpPower"
+                ],
+                [
+                    "load avatar",
+                    "loadAvatar"
+                ],
+                [
+                    "load tool",
+                    "loadTool"
+                ],
+                [
+                    "local bricks",
+                    "localBricks"
+                ],
+                [
+                    "max health",
+                    "maxHealth"
+                ],
+                [
+                    "membership type",
+                    "membershipType"
+                ],
+                [
+                    "muted",
+                    "muted"
+                ],
+                [
+                    "net id",
+                    "netId"
+                ],
+                [
+                    "position",
+                    "position"
+                ],
+                [
+                    "rotation",
+                    "rotation"
+                ],
+                [
+                    "scale",
+                    "scale"
+                ],
+                [
+                    "score",
+                    "score"
+                ],
+                [
+                    "socket",
+                    "socket"
+                ],
+                [
+                    "spawn handler",
+                    "spawnHandler"
+                ],
+                [
+                    "spawn position",
+                    "spawnPosition"
+                ],
+                [
+                    "speech bubble",
+                    "speech"
+                ],
+                [
+                    "speed",
+                    "speed"
+                ],
+                [
+                    "team",
+                    "team"
+                ],
+                [
+                    "equipped tool",
+                    "toolEquipped"
+                ],
+                [
+                    "user id",
+                    "userId"
+                ],
+                [
+                    "username",
+                    "username"
+                ],
+                [
+                    "player id",
+                    "playerId"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "NAME"
+        }
+    ],
+    "output": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_set",
+    "message0": "set %1 of player %2 to %3",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "avatar",
+                    "Avatar"
+                ],
+                [
+                    "camera distance",
+                    "CameraDistance"
+                ],
+                [
+                    "camera FOV",
+                    "CameraFOV"
+                ],
+                [
+                    "camera subject",
+                    "CameraObject"
+                ],
+                [
+                    "camera position",
+                    "CameraPosition"
+                ],
+                [
+                    "camera type",
+                    "CameraType"
+                ],
+                [
+                    "environment",
+                    "Environment"
+                ],
+                [
+                    "health",
+                    "Health"
+                ],
+                [
+                    "jump power",
+                    "JumpPower"
+                ],
+                [
+                    "outfit",
+                    "Outfit"
+                ],
+                [
+                    "position",
+                    "Position"
+                ],
+                [
+                    "scale",
+                    "Scale"
+                ],
+                [
+                    "score",
+                    "Score"
+                ],
+                [
+                    "speech bubble",
+                    "Speech"
+                ],
+                [
+                    "team",
+                    "Team"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_value",
+            "name": "val"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_addtool",
+    "message0": "add tool %1 to player %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "tool"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_print",
+    "message0": "print %1 for %2 seconds for player %3 at %4",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "message"
+        },
+        {
+            "type": "input_value",
+            "name": "duration"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "field_dropdown",
+            "name": "position",
+            "options": [
+                [
+                    "top",
+                    "top"
+                ],
+                [
+                    "center",
+                    "center"
+                ],
+                [
+                    "bottom",
+                    "bottom"
+                ]
+            ]
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_clearmap",
+    "message0": "clear map for player %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_deletebricks",
+    "message0": "delete list of bricks %1 for player %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "bricks"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_destroytool",
+    "message0": "remove tool %1 from player %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "tool"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_equiptool",
+    "message0": "force equip tool %1 for player %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "tool"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_kick",
+    "message0": "kick player %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_kill",
+    "message0": "kill player %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_message",
+    "message0": "message player %1 message %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_value",
+            "name": "message"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_prompt",
+    "message0": "prompt player %1 message %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_value",
+            "name": "message"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_respawn",
+    "message0": "respawn player %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_unequiptool",
+    "message0": "unequipt tool %1 from player %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "tool"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
 }]
 
 Blockly.defineBlocksWithJsonArray(definitions)

@@ -359,6 +359,83 @@ var toolbox = {
                     "type":"game_chatted"
                 }
             ]
+        },
+        {
+            "kind":"category",
+            "name":"Player",
+            "colour":"180",
+            "contents":[
+                {
+                    "kind":"block",
+                    "type":"player_get"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_set"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_addtool"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_print"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_clearmap"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_deletebricks"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_destroytools"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_equiptool"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_kick"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_kill"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_message"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_prompt"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_respawn"
+                    
+                },
+                {
+                    "kind":"block",
+                    "type":"player_unequiptool"
+                    
+                }
+            ]
         }
     ]
 }
