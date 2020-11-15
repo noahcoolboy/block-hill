@@ -1100,7 +1100,7 @@ var definitions = [{
 },
 {
     "type": "player_unequiptool",
-    "message0": "unequipt tool %1 from player %2",
+    "message0": "unequip tool %1 from player %2",
     "args0": [
         {
             "type": "input_value",
