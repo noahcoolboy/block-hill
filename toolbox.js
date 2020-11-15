@@ -397,7 +397,7 @@ var toolbox = {
                 },
                 {
                     "kind":"block",
-                    "type":"player_destroytools"
+                    "type":"player_destroytool"
                     
                 },
                 {
