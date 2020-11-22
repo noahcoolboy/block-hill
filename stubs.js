@@ -261,7 +261,7 @@ Blockly.JavaScript['player_unequiptool'] = function (block) {
 Blockly.JavaScript['team_new'] = function (block) {
   var value_name = Blockly.JavaScript.valueToCode(block, 'name', Blockly.JavaScript.ORDER_NONE);
   var value_color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_COMMA);
-  var code = `new Team(${value_name||"team"},${value_color});\n`
+  var code = `new Team(${value_name||"\"team\""},${value_color});\n`
   return [code, Blockly.JavaScript.ORDER_NEW];
 };
 
