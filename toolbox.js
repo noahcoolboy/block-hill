@@ -439,7 +439,7 @@ var toolbox = {
         },
         {
             "kind":"category",
-            "color":"75",
+            "colour":"75",
             "name":"Team",
             "contents":[
                 {
