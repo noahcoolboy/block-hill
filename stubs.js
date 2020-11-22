@@ -261,17 +261,13 @@ Blockly.JavaScript['player_unequiptool'] = function (block) {
 Blockly.JavaScript['team_new'] = function (block) {
   var value_name = Blockly.JavaScript.valueToCode(block, 'name', Blockly.JavaScript.ORDER_NONE);
   var value_color = Blockly.JavaScript.valueToCode(block, 'color', Blockly.JavaScript.ORDER_COMMA);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
+  var code = `new Team(${value_name||"team"},${value_color});\n`
   return [code, Blockly.JavaScript.ORDER_NEW];
 };
 
 Blockly.JavaScript['team_get'] = function (block) {
   var dropdown_prop = block.getFieldValue('prop');
   var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_MEMBER);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
+  var code = `${value_name}.${dropdown_prop}`;
   return [code, Blockly.JavaScript.ORDER_MEMBER];
 };
