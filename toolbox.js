@@ -440,6 +440,7 @@ var toolbox = {
         {
             "kind":"category",
             "color":"75",
+            "name":"Team",
             "contents":[
                 {
                     "kind":"block",
