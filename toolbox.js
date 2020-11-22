@@ -436,6 +436,20 @@ var toolbox = {
                     
                 }
             ]
+        },
+        {
+            "kind":"category",
+            "color":"75",
+            "contents":[
+                {
+                    "kind":"block",
+                    "type":"team_new"
+                },
+                {
+                    "kind":"block",
+                    "type":"team_get"
+                }
+            ]    
         }
     ]
 }

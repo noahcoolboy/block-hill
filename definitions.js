@@ -1117,6 +1117,57 @@ var definitions = [{
     "colour": 180,
     "tooltip": "",
     "helpUrl": ""
-}]
+},
+{
+    "type": "team_new",
+    "message0": "New team with name %1 color %2",
+    "args0": [
+      {
+        "type": "input_value",
+        "name": "name"
+      },
+      {
+        "type": "input_value",
+        "name": "color",
+        "align": "RIGHT"
+      }
+    ],
+    "output": "Team",
+    "colour": 75,
+    "tooltip": "",
+    "helpUrl": ""
+  },
+  {
+    "type": "team_get",
+    "message0": "Get property %1 of team %2",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "prop",
+        "options": [
+          [
+            "color",
+            "color"
+          ],
+          [
+            "name",
+            "name"
+          ],
+          [
+            "id",
+            "teamId"
+          ]
+        ]
+      },
+      {
+        "type": "input_value",
+        "name": "NAME"
+      }
+    ],
+    "output": null,
+    "colour": 75,
+    "tooltip": "",
+    "helpUrl": ""
+  }]
 
 Blockly.defineBlocksWithJsonArray(definitions)
