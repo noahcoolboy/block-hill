@@ -271,3 +271,65 @@ Blockly.JavaScript['team_get'] = function (block) {
   var code = `${value_name}.${dropdown_prop}`;
   return [code, Blockly.JavaScript.ORDER_MEMBER];
 };
+
+Blockly.JavaScript['player_avatarloaded'] = function(block) {
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  var code = `${value_player}.on("avatarLoaded",()=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_chatted'] = function(block) {
+  var variable_message = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('message'), Blockly.Variables.NAME_TYPE);
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  var code = `${value_player}.on("chatted",(${variable_message})=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_died'] = function(block) {
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  var code = `${value_player}.on("died",()=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_initialspawn'] = function(block) {
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  var code = `${value_player}.on("initialSpawn",()=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_moves'] = function(block) {
+  var variable_newpos = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('newpos'), Blockly.Variables.NAME_TYPE);
+  var variable_rot = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('rot'), Blockly.Variables.NAME_TYPE);
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  var code = `${value_player}.on("moved",(${variable_newpos}, ${variable_rot})=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_respawnevent'] = function(block) {
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  var code = `${value_player}.on("respawn",()=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_keypress'] = function(block) {
+  var variable_key = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('key'), Blockly.Variables.NAME_TYPE);
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `${value_player}.keypress((${variable_key})=>{\n${statements_code}});\n`;
+  return code;
+};
+
+Blockly.JavaScript['player_mouseclick'] = function(block) {
+  var value_player = Blockly.JavaScript.valueToCode(block, 'player', Blockly.JavaScript.ORDER_MEMBER);
+  var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `${value_player}.mouseclick(()=>{\n${statements_code}});\n`;
+  return code;
+};

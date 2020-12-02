@@ -434,7 +434,39 @@ var toolbox = {
                     "kind":"block",
                     "type":"player_unequiptool"
                     
-                }
+                },
+                {
+                    "kind":"block",
+                    "type":"player_avatarloaded"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_chatted"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_died"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_initialspawn"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_moves"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_respawnevent"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_keypress"
+                },
+                {
+                    "kind":"block",
+                    "type":"player_mouseclick"
+                },
             ]
         },
         {

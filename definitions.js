@@ -1122,52 +1122,208 @@ var definitions = [{
     "type": "team_new",
     "message0": "New team with name %1 color %2",
     "args0": [
-      {
-        "type": "input_value",
-        "name": "name"
-      },
-      {
-        "type": "input_value",
-        "name": "color",
-        "align": "RIGHT"
-      }
+        {
+            "type": "input_value",
+            "name": "name"
+        },
+        {
+            "type": "input_value",
+            "name": "color",
+            "align": "RIGHT"
+        }
     ],
     "output": "Team",
     "colour": 75,
     "tooltip": "",
     "helpUrl": ""
-  },
-  {
+},
+{
     "type": "team_get",
     "message0": "Get property %1 of team %2",
     "args0": [
-      {
-        "type": "field_dropdown",
-        "name": "prop",
-        "options": [
-          [
-            "color",
-            "color"
-          ],
-          [
-            "name",
-            "name"
-          ],
-          [
-            "id",
-            "teamId"
-          ]
-        ]
-      },
-      {
-        "type": "input_value",
-        "name": "NAME"
-      }
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "color",
+                    "color"
+                ],
+                [
+                    "name",
+                    "name"
+                ],
+                [
+                    "id",
+                    "teamId"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "NAME"
+        }
     ],
     "output": null,
     "colour": 75,
     "tooltip": "",
     "helpUrl": ""
-  }]
+},
+{
+    "type": "player_avatarloaded",
+    "message0": "When avatar loaded of player %1 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_chatted",
+    "message0": "When player chatted %1 %2 %3",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "message",
+            "variable": "message"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_died",
+    "message0": "When player died %1 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_initialspawn",
+    "message0": "When player loads in %1 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_moves",
+    "message0": "When player moved %1 %2 %3 %4",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "newpos",
+            "variable": "new position"
+        },
+        {
+            "type": "field_variable",
+            "name": "rot",
+            "variable": "rotation"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_respawnevent",
+    "message0": "When player respawned %1 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_keypress",
+    "message0": "When player presses a key %1 %2 %3",
+    "args0": [
+        {
+            "type": "field_variable",
+            "name": "key",
+            "variable": "key"
+        },
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "player_mouseclick",
+    "message0": "When player clicks %1 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "player"
+        },
+        {
+            "type": "input_statement",
+            "name": "code"
+        }
+    ],
+    "colour": 180,
+    "tooltip": "",
+    "helpUrl": ""
+}]
 
 Blockly.defineBlocksWithJsonArray(definitions)
