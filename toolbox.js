@@ -434,39 +434,7 @@ var toolbox = {
                     "kind":"block",
                     "type":"player_unequiptool"
                     
-                },
-                {
-                    "kind":"block",
-                    "type":"player_avatarloaded"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_chatted"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_died"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_initialspawn"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_moves"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_respawnevent"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_keypress"
-                },
-                {
-                    "kind":"block",
-                    "type":"player_mouseclick"
-                },
+                }
             ]
         },
         {
@@ -483,6 +451,77 @@ var toolbox = {
                     "type":"team_get"
                 }
             ]    
+        },
+        {
+            "kind":"category",
+            "colour":"135",
+            "name":"Brick",
+            "contents": [
+                {
+                    "kind":"block",
+                    "type":"brick_new"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_get"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_set"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_clone"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_destroy"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_intersects"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_clicked"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_touching"
+                },
+                {
+                    "kind":"block",
+                    "type":"brick_touchingended"
+                }
+            ]
+        },
+        {
+            "kind":"category",
+            "colour":"240",
+            "name":"Vector 3",
+            "contents": [
+                {
+                    "kind":"block",
+                    "type":"vec3_new"
+                },
+                {
+                    "kind":"block",
+                    "type":"vec3_get"
+                },
+                {
+                    "kind":"block",
+                    "type":"vec3_add"
+                },
+                {
+                    "kind":"block",
+                    "type":"vec3_sub"
+                },
+                {
+                    "kind":"block",
+                    "type":"vec3_equ"
+                },
+                
+            ]
         }
     ]
 }
