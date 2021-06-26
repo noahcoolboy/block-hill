@@ -1012,11 +1012,15 @@ var definitions = [{
 },
 {
     "type": "player_kick",
-    "message0": "kick player %1",
+    "message0": "kick player %1 for reason %2",
     "args0": [
         {
             "type": "input_value",
             "name": "player"
+        },
+        {
+            "type": "input_value",
+            "name": "reason"
         }
     ],
     "inputsInline": true,
@@ -1168,160 +1172,436 @@ var definitions = [{
     "colour": 75,
     "tooltip": "",
     "helpUrl": ""
-},
-{
-    "type": "player_avatarloaded",
-    "message0": "When avatar loaded of player %1 %2",
+}, {
+    "type": "brick_new",
+    "message0": "New brick with %1 position %2 scale %3 color %4",
     "args0": [
         {
-            "type": "input_value",
-            "name": "player"
+            "type": "input_dummy",
+            "align": "RIGHT"
         },
         {
-            "type": "input_statement",
-            "name": "code"
+            "type": "input_value",
+            "name": "position",
+            "align": "RIGHT"
+        },
+        {
+            "type": "input_value",
+            "name": "scale",
+            "align": "RIGHT"
+        },
+        {
+            "type": "input_value",
+            "name": "color",
+            "align": "RIGHT"
         }
     ],
-    "colour": 180,
+    "output": "Brick",
+    "colour": 135,
     "tooltip": "",
     "helpUrl": ""
 },
 {
-    "type": "player_chatted",
-    "message0": "When player chatted %1 %2 %3",
+    "type": "brick_get",
+    "message0": "Get property %1 of brick %2",
     "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "click distance",
+                    "clickDistance"
+                ],
+                [
+                    "clickable",
+                    "clickable"
+                ],
+                [
+                    "collision enabled",
+                    "collision"
+                ],
+                [
+                    "color",
+                    "color"
+                ],
+                [
+                    "deleted",
+                    "destroyed"
+                ],
+                [
+                    "light color",
+                    "lightColor"
+                ],
+                [
+                    "light enabled",
+                    "lightEnabled"
+                ],
+                [
+                    "light range",
+                    "lightRange"
+                ],
+                [
+                    "model",
+                    "model"
+                ],
+                [
+                    "name",
+                    "name"
+                ],
+                [
+                    "position",
+                    "position"
+                ],
+                [
+                    "rotation",
+                    "rotation"
+                ],
+                [
+                    "scale",
+                    "scale"
+                ],
+                [
+                    "shape",
+                    "shape"
+                ],
+                [
+                    "visibility",
+                    "visibility"
+                ],
+                [
+                    "id",
+                    "id"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "brick"
+        }
+    ],
+    "output": null,
+    "colour": 135,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "brick_set",
+    "message0": "Set property %1 of brick %2 to %3",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "collision enabled",
+                    "Collision"
+                ],
+                [
+                    "color",
+                    "Color"
+                ],
+                [
+                    "light color",
+                    "LightColor"
+                ],
+                [
+                    "light enabled",
+                    "LightEnabled"
+                ],
+                [
+                    "light range",
+                    "lightRange"
+                ],
+                [
+                    "model",
+                    "Model"
+                ],
+                [
+                    "position",
+                    "Position"
+                ],
+                [
+                    "rotation",
+                    "Rotation"
+                ],
+                [
+                    "scale",
+                    "Scale"
+                ],
+                [
+                    "visibility",
+                    "Visibility"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "brick"
+        },
+        {
+            "type": "input_value",
+            "name": "to"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 135,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "brick_clone",
+    "message0": "clone brick %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "brick"
+        }
+    ],
+    "inputsInline": true,
+    "output": "Brick",
+    "colour": 135,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "brick_destroy",
+    "message0": "destroy brick %1",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "brick"
+        }
+    ],
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 135,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "brick_intersects",
+    "message0": "brick %1 touches other brick %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "brick"
+        },
+        {
+            "type": "input_value",
+            "name": "brick2"
+        }
+    ],
+    "inputsInline": true,
+    "output": null,
+    "colour": 135,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "brick_clicked",
+    "message0": "brick was clicked %1 %2 %3 %4 %5",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "brick"
+        },
         {
             "type": "field_variable",
-            "name": "message",
-            "variable": "message"
-        },
-        {
-            "type": "input_value",
-            "name": "player"
-        },
-        {
-            "type": "input_statement",
-            "name": "code"
-        }
-    ],
-    "colour": 180,
-    "tooltip": "",
-    "helpUrl": ""
-},
-{
-    "type": "player_died",
-    "message0": "When player died %1 %2",
-    "args0": [
-        {
-            "type": "input_value",
-            "name": "player"
-        },
-        {
-            "type": "input_statement",
-            "name": "code"
-        }
-    ],
-    "colour": 180,
-    "tooltip": "",
-    "helpUrl": ""
-},
-{
-    "type": "player_initialspawn",
-    "message0": "When player loads in %1 %2",
-    "args0": [
-        {
-            "type": "input_value",
-            "name": "player"
-        },
-        {
-            "type": "input_statement",
-            "name": "code"
-        }
-    ],
-    "colour": 180,
-    "tooltip": "",
-    "helpUrl": ""
-},
-{
-    "type": "player_moves",
-    "message0": "When player moved %1 %2 %3 %4",
-    "args0": [
-        {
-            "type": "field_variable",
-            "name": "newpos",
-            "variable": "new position"
+            "name": "player",
+            "variable": "player"
         },
         {
             "type": "field_variable",
-            "name": "rot",
-            "variable": "rotation"
+            "name": "secure",
+            "variable": "secure"
         },
         {
-            "type": "input_value",
-            "name": "player"
-        },
-        {
-            "type": "input_statement",
-            "name": "code"
-        }
-    ],
-    "colour": 180,
-    "tooltip": "",
-    "helpUrl": ""
-},
-{
-    "type": "player_respawnevent",
-    "message0": "When player respawned %1 %2",
-    "args0": [
-        {
-            "type": "input_value",
-            "name": "player"
+            "type": "input_dummy"
         },
         {
             "type": "input_statement",
             "name": "code"
         }
     ],
-    "colour": 180,
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 135,
     "tooltip": "",
     "helpUrl": ""
 },
 {
-    "type": "player_keypress",
-    "message0": "When player presses a key %1 %2 %3",
+    "type": "brick_touching",
+    "message0": "brick was touched %1 %2 %3 %4",
     "args0": [
+        {
+            "type": "input_value",
+            "name": "brick"
+        },
         {
             "type": "field_variable",
-            "name": "key",
-            "variable": "key"
+            "name": "player",
+            "variable": "player"
         },
         {
-            "type": "input_value",
-            "name": "player"
+            "type": "input_dummy"
         },
         {
             "type": "input_statement",
             "name": "code"
         }
     ],
-    "colour": 180,
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 135,
     "tooltip": "",
     "helpUrl": ""
 },
 {
-    "type": "player_mouseclick",
-    "message0": "When player clicks %1 %2",
+    "type": "brick_touchingended",
+    "message0": "brick isn't touched anymore %1 %2 %3 %4",
     "args0": [
         {
             "type": "input_value",
-            "name": "player"
+            "name": "brick"
+        },
+        {
+            "type": "field_variable",
+            "name": "player",
+            "variable": "player"
+        },
+        {
+            "type": "input_dummy"
         },
         {
             "type": "input_statement",
             "name": "code"
         }
     ],
-    "colour": 180,
+    "inputsInline": true,
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 135,
+    "tooltip": "",
+    "helpUrl": ""
+}, {
+    "type": "vec3_new",
+    "message0": "New vector3 with %1 x %2 y %3 z %4",
+    "args0": [
+        {
+            "type": "input_dummy"
+        },
+        {
+            "type": "input_value",
+            "name": "x"
+        },
+        {
+            "type": "input_value",
+            "name": "y"
+        },
+        {
+            "type": "input_value",
+            "name": "z"
+        }
+    ],
+    "inputsInline": true,
+    "output": null,
+    "colour": 240,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "vec3_get",
+    "message0": "Get property %1 of vector3 %2",
+    "args0": [
+        {
+            "type": "field_dropdown",
+            "name": "prop",
+            "options": [
+                [
+                    "x",
+                    "x"
+                ],
+                [
+                    "y",
+                    "y"
+                ],
+                [
+                    "z",
+                    "z"
+                ]
+            ]
+        },
+        {
+            "type": "input_value",
+            "name": "vec"
+        }
+    ],
+    "inputsInline": true,
+    "output": null,
+    "colour": 240,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "vec3_add",
+    "message0": "Add vector3 %1 with other vector3 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "vec"
+        },
+        {
+            "type": "input_value",
+            "name": "vec2"
+        }
+    ],
+    "inputsInline": true,
+    "output": null,
+    "colour": 240,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "vec3_sub",
+    "message0": "subtract vector3 %1 with other vector3 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "vec"
+        },
+        {
+            "type": "input_value",
+            "name": "vec2"
+        }
+    ],
+    "inputsInline": true,
+    "output": null,
+    "colour": 240,
+    "tooltip": "",
+    "helpUrl": ""
+},
+{
+    "type": "vec3_equ",
+    "message0": "vector3 %1 equals vector3 %2",
+    "args0": [
+        {
+            "type": "input_value",
+            "name": "vec"
+        },
+        {
+            "type": "input_value",
+            "name": "vec2"
+        }
+    ],
+    "inputsInline": true,
+    "output": null,
+    "colour": 240,
     "tooltip": "",
     "helpUrl": ""
 }]
