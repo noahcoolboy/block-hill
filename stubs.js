@@ -69,7 +69,7 @@ Blockly.JavaScript['game_newbot'] = function (block) {
 
 Blockly.JavaScript['game_newbrick'] = function (block) {
     var value_brick = Blockly.JavaScript.valueToCode(block, 'brick', Blockly.JavaScript.ORDER_NONE);
-    var code = `Game.newBot(${value_brick});\n`;
+    var code = `Game.newBrick(${value_brick});\n`;
     return code;
 };
 
