@@ -1604,6 +1604,22 @@ var definitions = [{
     "colour": 240,
     "tooltip": "",
     "helpUrl": ""
+},
+{
+  "type": "game_on",
+  "message0": "On Game Start %1 %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "code"
+    }
+  ],
+  "colour": 0,
+  "tooltip": "",
+  "helpUrl": ""
 }]
 
 Blockly.defineBlocksWithJsonArray(definitions)

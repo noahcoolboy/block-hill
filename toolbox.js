@@ -340,6 +340,10 @@ var toolbox = {
                 },
                 {
                     "kind":"block",
+                    "type":"game_on"
+                },
+                {
+                    "kind":"block",
                     "type":"game_playerjoin"
                 },
                 {

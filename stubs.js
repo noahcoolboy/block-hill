@@ -375,3 +375,10 @@ Blockly.JavaScript['vec3_equ'] = function (block) {
     var code = `${value_vec}.equalsVector(${value_vec2})`;
     return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
+Blockly.JavaScript['game_on'] = function(block) {
+
+  var statements_game_on = Blockly.JavaScript.statementToCode(block, 'Game.on');
+    var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
+    var code = `Game.on("scriptsLoaded",=>{\n${statements_code}});\n`;
+  return code;
+};
