@@ -379,6 +379,6 @@ Blockly.JavaScript['game_on'] = function(block) {
 
   var statements_game_on = Blockly.JavaScript.statementToCode(block, 'Game.on');
     var statements_code = Blockly.JavaScript.statementToCode(block, 'code');
-    var code = `Game.on("scriptsLoaded",=>{\n${statements_code}});\n`;
+    var code = `Game.on("scriptsLoaded",() =>{\n${statements_code}});\n`;
   return code;
 };
